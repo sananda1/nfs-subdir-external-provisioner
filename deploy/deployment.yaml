@@ -29,11 +29,11 @@ spec:
             - name: PROVISIONER_NAME
               value: k8s-sigs.io/nfs-subdir-external-provisioner
             - name: NFS_SERVER
-              value: 10.3.243.101
+              value: fs-08201e947ff409057.efs.us-east-2.amazonaws.com
             - name: NFS_PATH
-              value: /ifs/kubernetes
+              value: /mnt/atlassian-np
       volumes:
         - name: nfs-client-root
           nfs:
-            server: 10.3.243.101
-            path: /ifs/kubernetes
+            server: fs-08201e947ff409057.efs.us-east-2.amazonaws.com
+            path: /mnt/atlassian-np
